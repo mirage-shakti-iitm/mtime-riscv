@@ -17,7 +17,7 @@ and its libraries are distributed under the ISC license.
 [jsoo]: http://ocsigen.org/js_of_ocaml/
 """
 opam-version: "2.0"
-maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+maintainer: "Sai Venkata Krishnan <saiganesha5.svkv@gmail.com>"
 authors: [ "The mtime programmers" ]
 homepage: "https://erratique.ch/software/mtime"
 doc: "https://erratique.ch/software/mtime"
@@ -27,7 +27,7 @@ tags: [ "time" "monotonic" "system" "org:erratique" ]
 license: "ISC"
 depends:
 [
-  "ocaml" {>= "4.03.0"}
+  "ocaml-riscv" {>= "4.03.0"}
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build}
@@ -37,4 +37,4 @@ conflicts: ["js_of_ocaml" {<= "3.3.0"} ]
 build: [[
    "ocaml" "pkg/pkg.ml" "build"
    "--pinned" "%{pinned}%"
-   "--with-js_of_ocaml" "%{js_of_ocaml:installed}%" ]]
+   "--with-js_of_ocaml" "%{js_of_ocaml:installed}%" "--toolchain" "riscv"]]
