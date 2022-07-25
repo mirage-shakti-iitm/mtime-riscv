@@ -38,3 +38,5 @@ build: [[
    "ocaml" "pkg/pkg.ml" "build"
    "--pinned" "%{pinned}%"
    "--with-js_of_ocaml" "%{js_of_ocaml:installed}%" "--toolchain" "riscv"]]
+
+install: [["opam-installer" "--prefix=%{prefix}%/riscv-sysroot" "mtime.install"]]
