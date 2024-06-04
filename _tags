@@ -1,4 +1,4 @@
-true : bin_annot, safe_string, default_compartment_id(6), function_sections
+true : bin_annot, safe_string, default_compartment_id(36), function_sections
 
 # Ideally we should not have this and use_mtime
 # would give us the right link order, see
